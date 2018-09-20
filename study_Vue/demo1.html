@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="demo1.css">
+    <script src="../tool/vue.js"></script>
+    <script src="demo1.js"></script>
+    <title>VueTest</title>
+</head>
+<body>
+    <div id="div1">
+        <input type="text" v-model="message1" v-bind:style="styleInput">
+        <span v-if="seen">
+            {{message1}}
+        </span>
+        <br>
+        <button v-on:click="inputC">
+            {{message2}}
+        </button>
+        <ul style="overflow: auto; height: 110px; width: 60px;">
+            <li v-for="d in text">
+                {{d.title}}
+            </li>
+        </ul>
+        <template v-if="key">
+            <ol>
+                <comp1 v-bind:prop1="tt" v-for="tt in message3" v-bind:key="tt.id" v-if="tt.seen"></comp1>
+            </ol>
+        </template>
+        <template v-else>
+            <br>
+            <button v-on:click="input1">隐藏显示第一个</button>
+            <br>
+            <button v-on:click="input2">隐藏显示第二个</button>
+            <br>
+            <button v-on:click="input3">隐藏显示第三个</button>
+            <br>
+            <button v-on:click="input4">隐藏显示第四个</button>
+            <br>
+            <button v-on:click="input5">隐藏显示第五个</button>
+        </template>
+        <button-counter></button-counter>
+
+    </div>
+    <div id="demo">
+        <button v-on:click="show = !show">
+            Toggle
+        </button>
+        <transition name="fade">
+            <p v-if="show">hello</p>
+        </transition>
+    </div>
+    <div id="example-2">
+        <button @click="show = !show">Toggle show</button>
+        <transition name="bounce">
+            <p v-if="show">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris facilisis enim libero, at lacinia diam fermentum id. Pellentesque habitant morbi tristique senectus et netus.</p>
+        </transition>
+    </div>
+</body>
+</html>

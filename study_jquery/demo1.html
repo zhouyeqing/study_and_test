@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .img{
+            width: 200px;
+            border: 5px solid #ff0000;
+            display: block;
+            float: left;
+        }
+        body>div:first-child{
+            width: 630px;
+            height: 366px;
+            border: 1px solid;
+        }
+        #divv{
+            width: 250px;
+        }
+        #select1{
+            font-size: 40px;
+            width: 100px;
+            height: 260px;
+        }
+        #center{
+            height: 260px;
+            width: 50px;
+            float: left;
+        }
+        #select2{
+            font-size: 40px;
+            width: 100px;
+            height: 260px;
+        }
+        #clear:after{
+            content: '';
+            width: 0;
+            height: 0;
+            display: block;
+            overflow: hidden;
+            clear: both;
+        }
+    </style>
+    <script src="../tool/jquery-3.3.1.js"></script>
+</head>
+<body>
+    <div>
+        <img src="../img/1.jpg" alt="" class="img">
+        <img src="../img/1.jpg" alt="" class="img">
+        <img src="../img/1.jpg" alt="" class="img">
+    </div>
+    <button class="button">点击显示消失</button>
+    <div id="divv">
+        <div style="float: left;">
+            <select name="downText" id="select1" size="5">
+                <option value="name1">苹果</option>
+                <option value="name2">橘子</option>
+                <option value="name3">香蕉</option>
+                <option value="name4">梨子</option>
+                <option value="name5">葡萄</option>
+                <option value="name6">西瓜</option>
+                <option value="name7">苹果1</option>
+                <option value="name8">橘子1</option>
+                <option value="name9">香蕉1</option>
+                <option value="name10">梨子1</option>
+                <option value="name11">葡萄1</option>
+                <option value="name12">西瓜1</option>
+            </select>
+        </div>
+        <div id="center">
+            <span>左</span>
+            <br>
+            <span>右</span>
+        </div>
+        <div style="float: left;" id="clear">
+            <select name="downText" id="select2" size="5">
+            </select>
+        </div>
+    </div>
+    <button id="ajaxButton">点击加载页面</button>
+    <div id="ajaxDiv"></div>
+    <script>
+        $(document).ready(function () {
+            $(".img").hover(function (e) {
+                let $newImg = $("<img style='width: 600px' id='newImg' src=" + this.src +">");
+                $("body").append($newImg);
+                $("#newImg").css(
+                    {
+                        "position": "absolute",
+                        "left": "630px",
+                        "top": 0,
+                        "display": "none"
+                    }
+                ).show(600);
+            }, function () {
+                $("#newImg").remove();
+            });
+            $(".button").click(function () {
+                if ($(".img").is(":visible")){
+                    $(".img").slideUp(600);
+                } else {
+                    $(".img").slideDown(600);
+                }
+            });
+            function a() {
+
+                $(".img").stop().animate({width: "-=190px",height: "-=345px"},1000,b);
+            }
+            function b() {
+                $(".img").stop().animate({width: "+=190px",height: "+=345px"},1000,a);
+            }
+            a();
+            $("#ajaxButton").click(function () {
+                $("#ajaxDiv").load("demo1.html .img");
+            });
+
+/*            $("a").mouseover(function (e) {
+                let $temp = "<div id='newDiv'>" + this.text + "</div>";
+                $("body").append($temp);
+                $("#newDiv").css({
+                    "border": "1px solid #000000",
+                    "position": "absolute",
+                    "font-size": "25px",
+                    "color": "#ff0000",
+                    "top": e.pageY + 20 + "px",
+                    "left": e.pageX + 40 + "px"
+                });
+            }).mouseout(function () {
+                $("#newDiv").remove();
+            });*/
+
+/*            let $showMore = $(".showMore");
+            $showMore.click(function() {
+                $("li:gt(9)").toggle();
+                alert($showMore.position().top);
+            });
+            alert($showMore.attr("class"));
+            let $li1 = $("<li><a>第一个</a></li>");
+            let $li2 = $("<li><a>第二个</a></li>");
+            $("ul").append($li1).append($li2);
+            $li1.insertAfter($("li:has(a:contains(555))"));
+            $li2.insertBefore($("li:has(a:contains(111))"));
+            $("li").replaceWith("<li>新内容</li>");
+            $("<li>最新内容</li>").replaceAll("li");*/
+
+/*            $("*").css("margin",0).css("padding",0);
+            $(".about").css("color","red");
+            $("#this").css("color","green");
+            $("p").css("color","blue");
+            $(":contains(我的ID是this)").click(function () {
+                alert(this.innerText);
+            });*/
+            /*$showMore.remove();     //移除元素，同样也移除元素的行为
+            $showMore.detach();     //移除元素，不移除元素的行为
+            $showMore.empty();      //清空元素的字节点
+            $showMore.clone();   $showMore.clone(true);   //复制元素，后一个同时复制元素的行为*/
+            //$hover(function1,fuction2);
+            //    $("a b");
+            //    $("a>b");
+            //    $("a+b");
+            //    $("a~b");
+            //    $("a").next();   a的下一个元素
+            //    $("a").next("b"); a的下一个叫b的元素     prev();    siblings();
+            //    $("[class=about]");
+            //    text();
+            //    $("div").css("background","red").filter(".a").css("background","blue");   将所有div元素背景设置为红色，然后匹配所有div元素中的类名为a的元素，将他们的背景设置为蓝色
+            //    $a.filter() 为按条件筛选$a元素集合中的元素 而 $a.find() 为在$a的子元素集合中按条件筛选元素
+/*            bind();   绑定事件，且设置处理函数。
+            unbind();   移除事件。
+            one();   绑定只执行一次的事件，设置处理函数。*/
+            //   is(":animated");   判断元素是否在动画中
+            //   delay();   将队列中的函数延时执行，参数放入时间
+            //   appendTo();   将元素删除，然后追加至指定元素的子节点后
+            //   has();   hasClass();
+        });
+    </script>
+</body>
+</html>
