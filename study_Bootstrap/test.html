@@ -11,6 +11,9 @@
     <title>Document</title>
 </head>
 <body style="padding-top: 10px">
+<!------------------------------------------------------------------
+-----------------------------第一阶段学习，基本样式--------------------
+-------------------------------------------------------------------->
 <!--<div class="container">
     <form action="#">
         <fieldset>
@@ -160,7 +163,7 @@
 <!------------------------------------------------------------------
 -----------------------------第二阶段学习，基本组件--------------------
 -------------------------------------------------------------------->
-<div class="container">
+<!--<div class="container">
     <div class="col-xs-11">
         <div class="btn-toolbar">
             <div class="btn-group">
@@ -427,13 +430,108 @@
         <blockquote>注意，这里是引用内容！</blockquote>
         <p><a href="#" class="btn btn-primary btn-lg">Learn more</a></p>
     </div>
+</div>-->
+<!------------------------------------------------------------------
+-----------------------------第三阶段学习，JavaScript插件--------------------
+-------------------------------------------------------------------->
+<div class="container">
+    <button class="btn btn-primary" data-toggle="modal" data-target="#popupCSS">单击弹出</button>
+    <div class="modal fade" id="popupCSS">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">x</button>
+                    <h4 class="modal-title">Modal标题</h4>
+                </div>
+                <div class="modal-body">
+                    <p>这里是弹窗里的具体内容......</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary">保存</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix" style="margin-bottom: 10px"></div>
+    <ul class="nav nav-tabs">
+        <li><a href="#home" data-toggle="tab">Home</a></li>
+        <li><a href="#profile" data-toggle="tab">Profile</a></li>
+        <li><a href="#message" data-toggle="tab">Messages</a></li>
+        <li><a href="#settings" data-toggle="tab">Settings</a></li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane active" id="home">
+            1111111111111111111111111one of the most important day for Chinese people. The families will get together
+            and enjoy the reunion. Mooncake is the typical food. People will have it while appreciate the full moon. At
+            this time, the old generation <a data-toggle="tooltip" data-original-title="这里是提示内容">like tol tell</a> the story of Hou Yi and his wife, which is the coming of this
+            festival. Hou Yi is a man with great strength. <a>He shot down</a> nine suns and left only one. While his wife was
+            so curious to taste the pill which Hou Yi told her to keep it for him. Then his wife flied to the moon and
+            left Hou Yi forever. It is said that the wife lives in the moon. So when we look at moon, she is watching
+            us.
+        </div>
+        <div class="tab-pane" id="profile">
+            2222222222222222222222222ne of the most important day for Chinese people. The families will get together and
+            enjoy the reunion. Mooncake is the typical food. People will have it while appreciate the full moon. At this
+            time, the old festival. Hou Yi is a man with great strength.While his wife was so curious to taste the pill
+            which Hou Yi told her to keep it for him. Then his wife flied to the moon and left Hou Yi forever. It is
+            said that the wife lives in the moon. So when we look at moon, she is watching us.
+        </div>
+        <div class="tab-pane" id="message">
+            333333333333333333333333 of the most important day for Chinese people. The families will get together and
+            enjoy the reunion. Mooncake is the typical food. People will have it while appreciate the full moon. At this
+            time, the old generation like to tell the story of Hou Yi and his wife, which is the coming of this
+            festival. Hou Yi is a man with great strength. He shot down nine suns and left only one. While his wife was
+            so curious to taste the pill which Hou Yi told her to keep it for him. Then his wife flied to the moon and
+            left Hou Yi forever. It is said that the wife lives in the moon. So when we look at moon, she is watching
+            us.
+        </div>
+        <div class="tab-pane" id="settings">
+            44444444444444444444444one of the most important day for Chinese people. The families will get together and
+            enjoy the. He shot down nine suns and left only one. While his wife was so curious to taste the pill which
+            Hou Yi told her to keep it for him. Then his wife flied to the moon and left Hou Yi forever. It is said that
+            the wife lives in the moon. So when we look at moon, she is watching us.
+        </div>
+    </div>
+    <div class="clearfix" style="margin-bottom: 10px"></div>
+    <button type="button" class="btn btn-primary" data-toggle="button">反转状态</button>
+    <div class="clearfix" style="margin-bottom: 10px"></div>
+    <div class="row">
+        <div class="col-xs-3">
+            <div class="btn-group btn-group-vertical">
+                <button class="btn btn-danger" id="button1">触发按钮</button>
+                <div id="demo1" style="display: none;">
+                    <div class="btn-group btn-group-vertical">
+                        <button class="btn btn-primary">折叠区域</button>
+                        <button class="btn btn-primary">折叠区域</button>
+                        <button class="btn btn-primary">折叠区域</button>
+                    </div>
+                </div>
+                <button class="btn btn-danger" id="button2">触发按钮</button>
+                <div id="demo2" style="display: none;">
+                    <div class="btn-group btn-group-vertical">
+                        <button class="btn btn-primary">折叠区域</button>
+                        <button class="btn btn-primary">折叠区域</button>
+                        <button class="btn btn-primary">折叠区域</button>
+                    </div>
+                </div>
+                <button class="btn btn-danger" id="button3">触发按钮</button>
+                <div id="demo3" style="display: none;">
+                    <div class="btn-group btn-group-vertical">
+                        <button class="btn btn-primary">折叠区域</button>
+                        <button class="btn btn-primary">折叠区域</button>
+                        <button class="btn btn-primary">折叠区域</button>
+                    </div>
+                </div>
+            </div>
 
-
-
+        </div>
+    </div>
 
 
 
 </div>
+
 
 <script src="../tool/bootstrap-3.3.7-dist/js/jquery.min.js"></script>
 <script src="../tool/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
