@@ -14,7 +14,7 @@
 <!------------------------------------------------------------------
 -----------------------------第一阶段学习，基本样式--------------------
 -------------------------------------------------------------------->
-<!--<div class="container">
+<div class="container">
     <form action="#">
         <fieldset>
             <legend>用户登录</legend>
@@ -159,11 +159,11 @@
     <div class="col-xs-2 pull-right bg-danger text-right">向右浮动</div>
     <div class="clearfix" style="margin-bottom: 10px"></div>
     <div class="col-xs-2 center-block bg-warning text-center col-xs-push-5">居中显示</div>
-</div>-->
+</div>
 <!------------------------------------------------------------------
 -----------------------------第二阶段学习，基本组件--------------------
 -------------------------------------------------------------------->
-<!--<div class="container">
+<div class="container">
     <div class="col-xs-11">
         <div class="btn-toolbar">
             <div class="btn-group">
@@ -308,7 +308,8 @@
     <div class="clearfix" style="margin-bottom: 10px;"></div>
     <div class="jumbotron">
         <h1>Hello,world!</h1>
-        <p style="text-indent: 2em">Mid-autumn festival is one of the most important day for Chinese people. The families will get together and
+        <p style="text-indent: 2em">Mid-autumn festival is one of the most important day for Chinese people. The
+            families will get together and
             enjoy the reunion. Mooncake is the typical food. People will have it while appreciate the full moon. At this
             time, the old generation like to tell the story of Hou Yi and his wife, which is the coming of this
             festival. Hou Yi is a man with great strength. He shot down nine suns and left only one. While his wife was
@@ -325,7 +326,8 @@
                 <div class="caption">
                     <h3>hello</h3>
                     <p style="word-wrap: break-word">At this
-                        time, the old generation like to tell the story of Hou Yi and his wife, which is the coming of this
+                        time, the old generation like to tell the story of Hou Yi and his wife, which is the coming of
+                        this
                         festival.</p>
                     <p>
                         <a href="#" class="btn btn-primary btn-xs">action</a>
@@ -420,7 +422,8 @@
     <div class="clearfix" style="margin-bottom: 10px;"></div>
     <div class="well">
         <h1>Hello,world!</h1>
-        <p style="text-indent: 2em">Mid-autumn festival is one of the most important day for Chinese people. The families will get together and
+        <p style="text-indent: 2em">Mid-autumn festival is one of the most important day for Chinese people. The
+            families will get together and
             enjoy the reunion. Mooncake is the typical food. People will have it while appreciate the full moon. At this
             time, the old generation like to tell the story of Hou Yi and his wife, which is the coming of this
             festival. Hou Yi is a man with great strength. He shot down nine suns and left only one. While his wife was
@@ -430,7 +433,7 @@
         <blockquote>注意，这里是引用内容！</blockquote>
         <p><a href="#" class="btn btn-primary btn-lg">Learn more</a></p>
     </div>
-</div>-->
+</div>
 <!------------------------------------------------------------------
 -----------------------------第三阶段学习，JavaScript插件--------------------
 -------------------------------------------------------------------->
@@ -464,8 +467,10 @@
         <div class="tab-pane active" id="home">
             1111111111111111111111111one of the most important day for Chinese people. The families will get together
             and enjoy the reunion. Mooncake is the typical food. People will have it while appreciate the full moon. At
-            this time, the old generation <a data-toggle="tooltip" data-original-title="这里是提示内容">like tol tell</a> the story of Hou Yi and his wife, which is the coming of this
-            festival. Hou Yi is a man with great strength. <a>He shot down</a> nine suns and left only one. While his wife was
+            this time, the old generation <a data-toggle="tooltip" data-original-title="这里是提示内容">like tol tell</a> the
+            story of Hou Yi and his wife, which is the coming of this
+            festival. Hou Yi is a man with great strength. <a>He shot down</a> nine suns and left only one. While his
+            wife was
             so curious to taste the pill which Hou Yi told her to keep it for him. Then his wife flied to the moon and
             left Hou Yi forever. It is said that the wife lives in the moon. So when we look at moon, she is watching
             us.
@@ -499,24 +504,24 @@
     <div class="row">
         <div class="col-xs-3">
             <div class="btn-group btn-group-vertical">
-                <button class="btn btn-danger" id="button1">触发按钮</button>
-                <div id="demo1" style="display: none;">
+                <button class="btn btn-danger" data-toggle="collapse" data-target="#" id="button1">触发按钮</button>
+                <div id="demo1" class="collapse in">
                     <div class="btn-group btn-group-vertical">
                         <button class="btn btn-primary">折叠区域</button>
                         <button class="btn btn-primary">折叠区域</button>
                         <button class="btn btn-primary">折叠区域</button>
                     </div>
                 </div>
-                <button class="btn btn-danger" id="button2">触发按钮</button>
-                <div id="demo2" style="display: none;">
+                <button class="btn btn-danger" data-toggle="collapse" data-target="#" id="button2">触发按钮</button>
+                <div id="demo2" class="collapse">
                     <div class="btn-group btn-group-vertical">
                         <button class="btn btn-primary">折叠区域</button>
                         <button class="btn btn-primary">折叠区域</button>
                         <button class="btn btn-primary">折叠区域</button>
                     </div>
                 </div>
-                <button class="btn btn-danger" id="button3">触发按钮</button>
-                <div id="demo3" style="display: none;">
+                <button class="btn btn-danger" data-toggle="collapse" data-target="#" id="button3">触发按钮</button>
+                <div id="demo3" class="collapse">
                     <div class="btn-group btn-group-vertical">
                         <button class="btn btn-primary">折叠区域</button>
                         <button class="btn btn-primary">折叠区域</button>
@@ -524,10 +529,50 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
+    <div class="clearfix" style="margin-bottom: 10px"></div>
 
+    <!--   轮播图容器   -->
+    <div data-ride="carousel" class="carousel slide" id="carousel-container">
+        <!--   图片容器   -->
+        <div class="carousel-inner">
+            <div class="item">
+                <img src="../img/1.jpg" alt="第一张图">
+                <div class="carousel-caption">
+                    <h3>图片1</h3>
+                    <p>第一张图片</p>
+                </div>
+            </div>
+            <div class="item active">
+                <img src="../img/2.jpg" alt="第二张图">
+                <div class="carousel-caption">
+                    <h3>图片2</h3>
+                    <p>第二张图片</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="../img/3.jpg" alt="第三张图">
+                <div class="carousel-caption">
+                    <h3>图片3</h3>
+                    <p>第三张图片</p>
+                </div>
+            </div>
+        </div>
+        <!--   圆圈指示符   -->
+        <ol class="carousel-indicators">
+            <li data-slide-to="0" data-target="#carousel-container"></li>
+            <li data-slide-to="1" data-target="#carousel-container"></li>
+            <li data-slide-to="2" data-target="#carousel-container" class="active"></li>
+        </ol>
+        <!--   左右控制按钮   -->
+        <a href="#carousel-container" data-slide="prev" class="left carousel-control">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a href="#carousel-container" data-slide="next" class="right carousel-control">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+    </div>
 
 
 </div>
