@@ -1,37 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../tool/bootstrap-3.3.7-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="demo1.css">
+    <script src="../tool/jquery-3.3.1.js"></script>
     <script src="../tool/vue.js"></script>
     <title>VueStudy</title>
 </head>
 <body class="container">
-<div id="app" class="row">
-    <h1 class="text-center">{{message1}}</h1>
-    <h1 class="text-center">{{message2.name}}</h1>
-    <h1 class="text-center">{{message3[0]}}</h1>
-    <div class="col-md-2 col-md-push-5">
-        <input type="text" v-model="message1" class="form-control">
-    </div>
-    <div class="clearfix"></div>
-    <h1 class="text-center" v-for="list in message3">{{list}}</h1>
-    <div class="col-md-6 col-md-push-3" v-if="message4">
-        <table class="table-bordered table table-hover">
-            <tr :class="{'info': isInfo}">
-                <th>ID</th>
-                <th>分类</th>
-            </tr>
-            <tr v-for="list in result">
-                <td>{{list.id}}</td>
-                <td>{{list.catalog}}</td>
-            </tr>
-        </table>
-    </div>
-    <div class="clearfix"></div>
-    <button class="btn btn-info" v-on:click="consol">警告框</button>
-    <button class="btn btn-info" v-on:click="show_hide">显示隐藏</button>
+<div id="shop">
+    <shop-car :info="lists"></shop-car>
 </div>
 
 
